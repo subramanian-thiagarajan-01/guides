@@ -16,14 +16,12 @@ Specify which users, service principals, or groups in Databricks can use this se
 4. Access Key Vault from Databricks Notebook
 Install the required Azure SDK library in your cluster or notebook environment:
 
-python
 ```
 %pip install azure-keyvault-secrets
 ```
 Use the following Python code pattern:
 
-python
-```
+```python
 from azure.keyvault.secrets import SecretClient
 
 credential = dbutils.credentials.getServiceCredentialsProvider('your-service-credential-name')
